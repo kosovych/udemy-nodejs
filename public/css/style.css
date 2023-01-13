@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-color: rgb(215, 215, 215);
+}
+.header__list {
+  margin: 0;
+  padding: 0;
+  height: 36px;
+  display: flex;
+  gap: 12px;
+  list-style: none;
+}
+.header__list-link {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+}
+.header__list-link:hover {
+  background-color: rgb(175, 175, 175);
+}
+
+main {
+  padding: 32px;
+}
