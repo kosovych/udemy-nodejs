@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user {
+  font-family: sans-serif;
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  border-radius: 3px;
+  display: flex;
+  transition: all 600ms;
+  transform-origin: top center;
+}
+
+.user--active {
+  transform: scale(1.2);
+}
+
+.user__img {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.user__name {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+.user__email {
+  margin: 0;
+  padding: 0;
+  color: #ccc;
+}
+
