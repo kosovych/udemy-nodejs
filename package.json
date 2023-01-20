@@ -1,15 +1,21 @@
 {
-  "name": "udemy-nodejs",
+  "name": "nodejs-complete-guide",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Complete Node.js Guide",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
   },
-  "author": "",
+  "author": "Maximilian Schwarzmüller",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
   }
 }
