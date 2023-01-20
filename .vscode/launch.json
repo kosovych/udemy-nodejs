@@ -8,7 +8,7 @@
       "cwd": "${workspaceFolder}",
       "type": "node-terminal",
       "request": "launch",
-      "command": "npm start",
+      "command": "nvm use v19.4.0 && npm start",
       "name": "Launch Program",
       "skipFiles": [
         "<node_internals>/**"
