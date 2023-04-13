@@ -4,3 +4,23 @@
     <body>
         <%- include('../includes/navigation.ejs') %>
         <%- include('../includes/end.ejs') %>
+
+    <% if (cartProducts.length) { %>
+        <ul>
+            <% for( let index = 0; index < cartProducts.length; index++ ) { %>
+                <li>
+                    <%= cartProducts[index].title %> (<%= cartProducts[index].qty %>)
+                    <form action="/delete-cart-item" method="POST">
+                        <input type="hidden" name="productId" value="<%= cartProducts[index].id %>">
+                        <button>Delete</button>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+        <p>Sum: <%= cart.totalPrice %></p>
+    <% } %>
+
+    <% if (!cartProducts.length) { %>
+        <h1>Cast is empty</h1>
+    <% } %>
+    
