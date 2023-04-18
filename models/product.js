@@ -3,6 +3,8 @@ const { readFile, writeFile } = require('fs/promises');
 const { randomUUID } = require('crypto');
 const path = require('path');
 
+const db = require('../util/db');
+
 const p = path.join(
   path.dirname(require.main.filename),
   'data',
@@ -64,7 +66,12 @@ module.exports = class Product {
     }
   }
 
-  static fetchAll(cb) {
-    getProductsFromFile(cb);
+  static async fetchAll() {
+    try {
+      const [products] = await db.execute('SELECT * FROM products');
+      return products;
+    } catch (error) {
+      console.log(err);
+    }
   }
 };
